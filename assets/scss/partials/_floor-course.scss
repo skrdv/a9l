@@ -1,0 +1,37 @@
+.floorCourse {
+  background: $white_color;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+  margin: 0;
+  &-image {
+    height: 100%;
+    min-height: 320px;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  &-image.is__photo {
+    background-size: cover;
+  }
+  &-image.is__framed {
+    background-size: cover;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    bottom: 30px;
+    right: 50px;
+    height: auto;
+  }
+  &-image.is__logo {
+    background-size: 80% auto;
+    background-position: center center;
+  }
+  &-image.is__scheme {
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    bottom: 30px;
+    right: 50px;
+    height: auto;
+  }
+
+}

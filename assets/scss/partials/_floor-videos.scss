@@ -1,0 +1,172 @@
+.floorVideos {
+	.carousel {
+		&-inner {
+			background: $black-color;
+		}
+		&-item {
+			display: none;
+			position: relative;
+			padding-bottom: 120px;
+			&.active {display: block;}
+			@include media('max-xs') {
+				height: 400px;
+			}
+			@include media('xs') {
+				height: 500px;
+			}
+			@include media('sm') {
+				height: 600px;
+			}
+			@include media('md') {
+				height: 700px;
+			}
+			@include media('lg') {
+				height: 800px;
+			}
+			
+		}
+
+		&-indicators {
+			width: 100%;
+			margin: 0;
+			background: #222933;
+			@include media('max-md') {
+				flex-direction: column;
+				position: relative;
+				left: 0;
+				bottom: 0;
+				padding: 0;
+			}
+			@include media('md') {
+				flex-direction: row;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding: 0 60px;
+			}
+			.indicator {
+				position: relative;
+				margin: 0;
+				text-indent: inherit;
+				background: #222933;
+				border-left: 1px solid #40474f;
+				border-top: 5px solid transparent;
+				transition: all .5s ease-in-out;
+				&:last-child {
+					border-right: 1px solid #40474f;
+				}
+				@include media('max-md') {
+					 max-width: 100%;
+					 height: 70px;
+					 border-bottom: 1px solid #40474f;
+				}
+				@include media('md') {
+					 max-width: 240px;
+					 height: 120px;
+					 border-bottom: 1px solid #40474f;
+				}
+				&.active,
+				&:hover,
+				&:focus {
+					background: #222933;
+					border-top: 5px solid $white-color;
+					opacity: 1;
+					.indicator {
+						&-arrow-top {display: block;}
+						&-arrow-right {display: none;}
+						&-num, &-name {
+							color: $white-color;
+							border-color: $white-color;
+						}
+					}
+				}
+				&-arrow {
+					position: absolute;
+					right: 20px;
+					top: 10px;
+					width: 14px;
+					height: 14px;
+					@include media('max-md') {
+						display: none;
+					}
+					@include media('md') {
+						display: block;
+					}
+					&-top {
+						display: none;
+						&-icon {fill: white;}
+					}
+					&-right {
+						&-icon {fill: #4e545c;}
+					}
+				}
+				&-num {
+					display: inline-block;
+					margin: 10px;
+					color: #40474f;
+					font-size: 2.5rem;
+					line-height: 2.5rem;
+					font-weight: 500;
+					letter-spacing: 3px;
+					border-bottom: 1px solid #40474f;
+					transition: all .5s ease-in-out;
+				}
+				&-name {
+					color: #40474f;
+					font-size: 0.88rem;
+					line-height: 0.88rem;
+					font-weight: 300;
+					text-transform: uppercase;
+					transition: all .5s ease-in-out;
+					@include media('max-md') {
+						position: absolute;
+						right: 10px;
+						top: 15px;
+						left: auto;
+						bottom: auto;
+					}
+					@include media('md') {
+						position: absolute;
+						right: auto;
+						top: auto;
+						left: 10px;
+						bottom: 15px;
+						padding-right: 30px;
+					}
+				}
+
+			}
+		}
+
+		&-control {
+			&-next,
+			&-prev {
+				top: auto;
+				bottom: 0;
+		    width: 60px;
+		    height: 120px;
+		    z-index: 999;
+				@include media('max-sm') {
+					 display: none;
+				}
+			}
+			&-prev {
+				border-right: 1px solid #40474f;
+			}
+			&-next {
+				border-left: 1px solid #40474f;
+			}
+			&-prev-icon {
+				width: 10px;
+				height: 50px;
+				background: url(assets/img/arrow-left.png) no-repeat center center;
+			}
+			&-next-icon {
+				width: 10px;
+				height: 50px;
+				background: url(assets/img/arrow-right.png) no-repeat center center;
+			}
+		}
+
+	}
+}

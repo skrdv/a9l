@@ -1,0 +1,261 @@
+.team-member {
+  &-top {
+    text-align: center;
+    background: #222933;
+    padding: 60px 0;
+  }
+  &-name {
+    font-size: 3rem;
+    font-weight: 100;
+    color: $white_color;
+    text-transform: uppercase;
+  }
+  &-position {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $white_color;
+    text-transform: uppercase;
+  }
+  &-info {
+  }
+  &-quote {
+    width: 100%;
+    padding: 60px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: #94968b;
+    img {
+      // float: left;
+      // position: relative;
+      // top: -10px;
+    }
+    img, p {
+      display: inline;
+    }
+  }
+  &-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include xxs {
+    height: 360px;
+    margin: 0px -15px;
+    }
+    @include xs {
+    height: 420px;
+    }
+    @include md {
+    height: 650px;
+    }
+  }
+  &-description {
+    margin: 0 0 0 -30px;
+    padding: 30px;
+    @include xxs {
+    border-top: 0px solid #dedede;
+    min-height: 420px;
+    }
+    @include xs {
+    border-top: 0px solid #dedede;
+    min-height: 420px;
+    }
+    @include sm {
+    border-top: 1px solid #dedede;
+    }
+    .nano-content {
+      top: 24px;
+      left: 30px;
+      bottom: 32px;
+      }
+    .nano-content strong {
+      font-weight: 500;
+      }
+    }
+}
+
+/*
+.team-member2 {
+  &-top {
+    text-align: center;
+    background: #222933;
+    padding: 60px 0;
+  }
+  &-name {
+    font-size: 3rem;
+    font-weight: 100;
+    color: $white_color;
+    text-transform: uppercase;
+  }
+  &-position {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $white_color;
+    text-transform: uppercase;
+  }
+  &-info {
+  }
+  &-quote {
+    width: 100%;
+    padding: 60px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: #94968b;
+    img {
+      // float: left;
+      // position: relative;
+      // top: -10px;
+    }
+    img, p {
+      display: inline;
+    }
+  }
+  &-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include xxs {
+    height: 360px;
+    margin: 0px -15px;
+    }
+    @include xs {
+    height: 420px;
+    }
+    @include md {
+    height: 650px;
+    }
+  }
+  &-description {
+    margin: 0 0 0 -30px;
+    padding: 30px;
+    @include xxs {
+    border-top: 0px solid #dedede;
+    min-height: 420px;
+    }
+    @include xs {
+    border-top: 0px solid #dedede;
+    min-height: 420px;
+    }
+    @include sm {
+    border-top: 1px solid #dedede;
+    }
+    .nano-content {
+      top: 24px;
+      left: 30px;
+      bottom: 32px;
+      }
+    }
+}
+
+*/
+
+.team-members {
+  background-color: $blue_color;
+  padding: 100px 0px;
+  .page-title {
+    width: 100%;
+    padding-bottom: 60px;
+    margin: 0 15px 60px 15px;
+    font-size: 3.5rem;
+    font-weight: 100;
+    text-align: center;
+    color: $white_color;
+    border-bottom: 1px solid $red_color;
+  }
+}
+
+.memberbox-first {
+  max-height: 440px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  @include xxs {
+    max-height: 100%;
+  }
+  .memberbox {
+    &-photo {
+      margin-left: -15px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      @include xxs {
+      height: 360px;
+      margin: 0px -15px;
+      }
+      @include xs {
+      height: 420px;
+      }
+      @include md {
+      height: 450px;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-height: 440px;
+      padding: 0 20px 20px 0;
+      @include xxs {
+        padding: 20px;
+      }
+    }
+    &-empty {
+      flex: 1 0 auto;
+    }
+    &-name {
+      flex: 0 0 auto;
+      margin-bottom: 30px;
+      color: #292d36;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    &-line {
+      flex: 0 0 auto;
+      width: 70px;
+      height: 4px;
+      margin-bottom: 30px;
+      background: $red_color;
+    }
+    &-position {
+      flex: 0 0 auto;
+      margin-bottom: 25px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.memberbox {
+  display: block;
+  background-color: $white_color;
+  margin-bottom: 30px;
+  @include xxs {
+    max-width: 320px;
+    margin: 0 auto 30px auto;
+  }
+  &-info {
+    padding: 20px 20px 0px 20px;
+    height: 140px;
+    box-sizing:border-box;
+  }
+  &-name {
+    margin-bottom: 15px;
+    color: $dark_color;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &-position {
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    color: #94968b;
+    text-transform: uppercase;
+  }
+
+}

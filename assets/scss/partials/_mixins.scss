@@ -1,0 +1,66 @@
+
+// Breakpoints
+$xs-width: '576px';
+$sm-width: '768px';
+$md-width: '992px';
+$lg-width: '1200px';
+$xl-width: '1600px';
+
+
+// Bootstrap
+@mixin xxs {
+  @media (max-width: #{$xs-width}) {@content;}
+}
+@mixin xs {
+  @media (min-width: #{$xs-width}) {@content;}
+}
+@mixin sm {
+  @media (min-width: #{$sm-width}) {@content;}
+}
+@mixin md {
+  @media (min-width: #{$md-width}) {@content;}
+}
+@mixin lg {
+  @media (min-width: #{$lg-width}) {@content;}
+}
+
+// Media Queries
+@mixin media($point){
+  @if $point == 'max-xs' {
+		@media (max-width: #{$xs-width}) {@content;}
+	}
+  @if $point == 'max-sm' {
+		@media (max-width: #{$sm-width}) {@content;}
+	}
+  @if $point == 'max-md' {
+		@media (max-width: #{$md-width}) {@content;}
+	}
+  @if $point == 'xs' {
+		@media (min-width: #{$xs-width}) {@content;}
+	}
+  @if $point == 'sm' {
+		@media (min-width: #{$sm-width}) {@content;}
+	}
+  @if $point == "md" {
+		@media (min-width: #{$md-width}) {@content;}
+	}
+  @if $point == "lg" {
+		@media (min-width: #{$lg-width}) {@content;}
+	}
+  @if $point == "xl" {
+		@media (min-width: #{$xl-width}) {@content;}
+	}
+}
+
+
+// Nebula Mixins Examples
+// .element {@include clearfix();}
+// .example {font-size: rem(14px);}
+// .element {@include zoom(0.75, center top);}
+// .element {@include background-color(#333, 0.5);}
+// .element-solid {@include arrow('top','left', 10px, #4fade3);}
+// .element-border {@include arrow('top','left', 10px, #eee, #4fade3, 6px);}
+// .element a {@include link-colors(red, orange, yellow, green, blue);}
+// .element {@include supports(box-shadow, 2px 2px 2px black);}
+// .element {@include linear-gradient(to bottom, #31B7D7, #EDAC7D);}
+// @include keyframes(slide-down){0% {opacity: 1;} 90% {opacity: 0;}}

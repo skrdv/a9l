@@ -1,0 +1,1 @@
+<?php if (get_sub_field('floor-before')) { ?><div class="floorBefore <?php if (!get_sub_field('floor-beforetitle')) { echo 'no__title'; } ?> <?php the_field('section-background'); ?>"><div class="container"><?php the_sub_field('floor-beforetitle'); ?></div></div><?php } ?>

@@ -1,0 +1,43 @@
+/*!
+	Theme Name:   Area9 Learning
+	Theme URI:    http://area9.dk/
+	Description:  Area9
+	Author:       Area9
+	Author URI:   http://area9.dk/
+	Template:     Nebula-master
+	Version:      1.0.0
+	Text Domain:  twenty-fifteen-child
+*/
+
+
+// Bootstrap
+@import '../../../../Nebula-master/assets/scss/partials/variables';
+@import 'variables';
+@import '../../../../Nebula-master/assets/scss/partials/mixins';
+@import 'mixins';
+@import '../../../../Nebula-master/assets/scss/partials/helpers';
+@import '../../../../Nebula-master/assets/scss/partials/animations';
+
+// Commons
+@import 'fonts';
+@import 'layout';
+@import 'elements';
+
+// Templates
+@import 'home';
+@import 'news';
+@import 'team';
+@import 'licensing';
+
+// Floors
+@import 'floor';
+@import 'floor-text';
+@import 'floor-image';
+@import 'floor-videos';
+@import 'floor-course';
+@import 'floor-custom';
+@import 'floor-quotes';
+@import 'floor-testimonials';
+
+// Vendors
+// @import 'nanoscroller';

@@ -1,0 +1,50 @@
+.quotes {
+  &-container {
+    padding: 5px 20px 65px 20px;
+  }
+  &-container.on__team {
+    padding: 65px 20px 60px 20px;
+  }
+  &-container.on__getstarted {
+    padding: 65px 20px 60px 20px;
+  }
+  &-mark {
+    display:inline;
+    position: relative;
+    bottom: 16px;
+    left: -10px;
+  }
+  &-text {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+  &-author {
+    font-size: 12px;
+    text-align: center;
+  }
+  //Цвет элементов для этажей, в зависимости от фона
+  .floorQuotes.bg__white &-text {
+    color: #94968b;
+  }
+  .floorQuotes.bg__white &-author {
+    color: $dark_color;
+  }
+  .floorQuotes.bg__biege &-text, .floorQuotes.bg__blue &-text  {
+    color:  $white_color;
+  }
+  .floorQuotes.bg__biege &-author, .floorQuotes.bg__blue &-author {
+    color: $biege_color;
+  }
+  //Цвет элементов для страницы члена команды
+  .on__team &-text {
+    color: $biege3_color;
+  }
+  //Цвет элементов для страницы Get Started
+  .on__getstarted &-text {
+    color: $biege3_color;
+  }
+}

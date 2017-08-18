@@ -1,0 +1,28 @@
+// ===========================
+// Child theme variables
+// ===========================
+
+$primary_color: #93948a; //This value (is supposed to) override both the parent theme and the WP Customizer
+$secondary_color: #575752; //This value (is supposed to) override both the parent theme and the WP Customizer
+$text_color: #212831;
+$font_stack: 'Helvetica Neue LT Std';
+$background_color: #ffffff;
+
+$dark_primary_color: darken($primary_color, 20%);
+$dark_secondary_color: darken($secondary_color, 20%);
+
+$danger_color: #ca3838;
+$warning_color: #f6b83f;
+$info_color: #00a0d2;
+$success_color: #58c026;
+
+$white_color: #ffffff;
+$black_color: #000000;
+$dark_color: #292d36;
+$darkred_color: #411719;
+$red_color: #dc1d40;
+$biege4_color: #4e4f49;
+$biege3_color: #89897f;
+$biege2_color: #cbccbc;
+$biege_color: #e5e2d9;
+$blue_color: #222933;

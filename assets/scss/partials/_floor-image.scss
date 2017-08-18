@@ -1,0 +1,26 @@
+.floorImage {
+  background: $white_color;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+  margin: 0;
+  .bg__white & {
+    box-shadow: 0px 0px 0px rgba(0,0,0,.0);
+    border-top: 1px solid $biege_color;
+  }
+  &-image {
+    height: 100%;
+    min-height: 320px;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  &-image.is__photo {
+    background-size: cover;
+  }
+  &-image.is__logo {
+    background-size: 80% auto;
+    background-position: center center;
+  }
+  &-image.is__scheme {
+    background-size: contain;
+  }
+
+}

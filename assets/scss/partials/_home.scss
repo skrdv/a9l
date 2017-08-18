@@ -1,0 +1,316 @@
+
+
+
+.section {
+
+	&-home {
+		// Banner
+		&-banner {
+			background-size: cover;
+			.container {
+				position: relative;
+				text-align: center;
+				@include media('xs') {
+					// width: 900px;
+					height: 300px;
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+				@include media('sm') {
+					// width: 900px;
+					height: 400px;
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+				@include media('md') {
+					width: 900px;
+					height: 800px;
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+				@include media('md') {
+					height: 800px;
+				}
+				@include media('lg') {
+					height: 800px;
+				}
+				@include media('xl') {
+					height: 800px;
+				}
+			}
+			.title {
+				color: #fff;
+				font-size: 3.25rem;
+				font-weight: 100;
+				padding: 50px 0;
+				margin: 0;
+				&-two {
+					font-size: 2.125rem;
+					font-weight: 300;
+					letter-spacing: 0;
+					text-transform: capitalize;
+					margin: 0 0 50px 0;
+				}
+			}
+			.text {
+				color: #fff;
+				font-size: 1.375rem;
+				font-weight: 400;
+				margin: 60px 15px;
+			}
+			.line {
+				width: 70px;
+				height: 2px;
+				display: inline-block;
+				background: #fff;
+			}
+			.buttons {
+				position: absolute;
+				left: 0;
+				bottom: 50px;
+				width: 100%;
+				.btn {
+					margin: 15px 50px;
+					padding: 13px;
+					width: 260px;
+				}
+			}
+		}
+		// Logotypes
+		&-logos {
+			background: #e6e6de;
+			.container {
+				width: 100%;
+				display: flex;
+				@include media('max-sm') {
+					flex-direction: column;
+				}
+				@include media('sm') {
+					flex-direction: row;
+				}
+			}
+			.item {
+				padding: 0 50px;
+				padding: 30px;
+				.image {
+					opacity: 0.6;
+					filter: grayscale(100%);
+					transition: all .5s ease-in-out;
+				}
+				&:hover,
+				&:focus {
+					.image {
+						opacity: 1;
+						filter: grayscale(0%);
+					}
+				}
+			}
+		}
+		// Personalize
+		&-personalize {
+			.container {
+				max-width: 1000px;
+				padding-top: 100px;
+				padding-bottom: 100px;
+				text-align: center;
+				&:last-child {
+					width: 100%;
+					max-width: 100%;
+					padding-top: 60px;
+				}
+			}
+			.title {
+				font-size: 1.875rem;
+				font-weight: 300;
+				margin-bottom: 100px;
+			}
+			.text {
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5rem;
+				p {
+					margin-bottom: 25px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.items {
+				// display: flex;
+		    // justify-content: space-around;
+				// @include media('max-sm') {
+				// 	flex-direction: column;
+				// }
+				// @include media('sm') {
+				// 	flex-direction: row;
+				// }
+				.item {
+					display: inline-block;
+					width: 19%;
+				}
+				.title {
+					font-size: 0.875rem;
+					font-weight: 400;
+					letter-spacing: 0;
+					margin: 20px 0 10px 0;
+				}
+				.arrow {
+					svg {
+						line,
+						polyline {
+							stroke: #222933;
+						}
+					}
+				}
+			}
+			.buttons {
+				margin: 100px 0 40px 0;
+			}
+		}
+		// Research Video
+		&-research {
+			height: 100vh;
+			min-height: 900px;
+			padding-bottom: 120px;
+			.video {
+				&-title {
+					bottom: 50%;
+    			margin-bottom: -100px;
+					font-size: 2.25rem;
+					font-weight: 300;
+				}
+				&-desc {
+					font-size: 1.125rem;
+					font-weight: 400;
+					letter-spacing: 1px;
+					line-height: 1.875rem;
+					p {margin-bottom: 30px;}
+				}
+				&-info {
+					bottom: 0;
+					.btn {margin: 35px 0;}
+				}
+			}
+		}
+		// How It Works
+		&-howitworks {
+			background: #e7e7df;
+			.container {
+				width: 100%;
+				text-align: center;
+			}
+			.title {
+				font-size: 2.25rem;
+				font-weight: 300;
+				padding: 100px 0;
+			}
+			.buttons {
+				padding: 100px 0;
+				.btn {
+					border: 1px solid #d3d1c4;
+				}
+			}
+			img {
+				display: none;
+			}
+			.mobile {
+				@include media('max-sm') {
+					display: inline-block;
+				}
+			}
+			.desktop {
+				@include media('sm') {
+					display: inline-block;
+				}
+			}
+
+		}
+		// Industry Solutiuon
+		&-industry {
+			.container {
+				width: 100%;
+				padding-left: 30px;
+				padding-right: 30px;
+				text-align: center;
+			}
+			.title {
+				font-size: 2.25rem;
+				font-weight: 300;
+				padding: 100px 0;
+			}
+			.item {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 30px;
+				&:hover {
+					.image {
+						filter: grayscale(0%);
+					}
+				}
+				.title {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					padding: 0;
+					z-index: 99;
+					background: rgba(49,56,65,.9);
+					color: #fff;
+					line-height: 56px;
+					font-size: 0.875rem;
+					font-weight: 400;
+				}
+				.arrow {
+					position: absolute;
+					right: 20px;
+					top: 20px;
+					width: 50px;
+					height: 50px;
+					z-index: 99;
+					padding: 0;
+					border: 1px solid #fff;
+					border-radius: 50%;
+					line-height: 44px;
+					svg {
+						line,
+						polyline {
+							stroke: #fff;
+						}
+					}
+				}
+				.image {
+					transition: all .5s ease-in-out;
+					filter: grayscale(100%);
+				}
+			}
+			.buttons {
+				padding: 100px 0;
+			}
+		}
+		// Customers Video
+		&-customers {
+			height: 100vh;
+			min-height: 900px;
+			padding-bottom: 120px;
+			.video {
+				&-title {
+					bottom: 50%;
+    			margin-bottom: -100px;
+					font-size: 2.25rem;
+					font-weight: 300;
+				}
+				&-desc {
+					font-size: 0.875rem;
+					font-weight: 400;
+					letter-spacing: 1px;
+					p {margin-bottom: 30px;}
+				}
+				&-info {
+					bottom: 0;
+					.btn {margin: 35px 0;}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+
+.floorTestimonials {
+  color: #fff;
+}
+
+.testimonials {
+  &-title {
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  .bg__white &-title {
+    color: $dark_color;
+  }
+  .bg__blue &-title, .bg__biege &-title {
+    color: $white_color;
+  }
+}
+
+.testimonial {
+  &-container {
+
+  }
+  &-container.have__photo {
+    padding: 0 0 0 100px;
+  }
+  &-photo {
+    float: left;
+    width: 82px;
+    margin-left: -100px;
+    margin-top: 6px;
+  }
+
+  &-text, &-text p{
+    color: $white_color;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: normal;
+  }
+  &-author {
+    color: $biege2_color;
+    margin: 0 0 40px 0;
+    padding: 0 0 0 0;
+    font-weight: 300;
+  }
+}
