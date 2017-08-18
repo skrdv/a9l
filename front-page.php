@@ -30,7 +30,7 @@ if ( !defined('ABSPATH') ){ //Redirect (for logging) if accessed directly
 		<?php if( have_rows('logos') ): ?>
     	<?php while ( have_rows('logos') ) : the_row(); ?>
 				<a class="item" href="<?php the_sub_field('logo-url'); ?>">
-					<img class="image" src="<?php the_sub_field('logo-image'); ?>" />
+					<img src="<?php the_sub_field('logo-image'); ?>" />
 				</a>
     	<?php endwhile; ?>
 		<?php else: ?>
@@ -122,9 +122,10 @@ if ( !defined('ABSPATH') ){ //Redirect (for logging) if accessed directly
 					<div class="col-sm-6 col-md-3">
 						<a class="item" href="<?php the_sub_field('industry-url'); ?>">
 							<div class="arrow"><?php include 'assets/img/arrow.svg'; ?></div>
-							<img class="image" src="<?php the_sub_field('industry-image'); ?>"
-								alt="<?php the_sub_field('industry-title'); ?>" />
-							<div class="title"><?php the_sub_field('industry-title'); ?></div>
+							<img src="<?php the_sub_field('industry-image'); ?>" alt="<?php the_sub_field('industry-title'); ?>" />
+							<div class="title">
+								<?php the_sub_field('industry-title'); ?>
+							</div>
 						</a>
 					</div>
 	    	<?php endwhile; ?>
@@ -132,12 +133,10 @@ if ( !defined('ABSPATH') ){ //Redirect (for logging) if accessed directly
 			</div>
 		<?php else: ?>
 		<?php endif; ?>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="buttons">
-					<a class="btn btn-red" href="<?php the_field('industries-btn-url'); ?>"><?php the_field('industries-btn-title'); ?></a>
-				</div>
-			</div>
+		<div class="buttons">
+			<a class="btn btn-red" href="<?php the_field('industries-btn-url'); ?>">
+				<?php the_field('industries-btn-title'); ?>
+			</a>
 		</div>
 	</div>
 </section>
